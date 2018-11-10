@@ -1,0 +1,7 @@
+{
+    "name": "automad/extension-skeleton",
+    "description": "An Automad extension package skeleton for developers",
+    "type": "automad-package",
+    "keywords": ["extension", "development"],
+    "license": "MIT"
+}
