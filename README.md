@@ -43,4 +43,4 @@ To install extensions to the `packages` directory and make autoloading work, bes
 
 ## 4. Publish Your Work
 
-Follow the guide on [Packagist](https://packagist.org) to share your theme with other people.
+Follow the guide on [Packagist](https://packagist.org) to share your extension with other people.
