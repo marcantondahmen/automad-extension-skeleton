@@ -1,15 +1,35 @@
 # Automad Extension Skeleton
 
-You can use this package as a skeleton for new [Automad](https://automad.org) extensions. Just adapt a couple of items following the naming convention below to setup autoloading.
+You can use this package as a skeleton for new [Automad](https://automad.org) extensions. 
 
-## Naming Convention and Autoloading
+## Class File
 
-Following an existing naming scheme for Composer packages, the `name` in `composer.json` should be lowercase and dashes should be used to separate words. That rule does't apply to PHP classes and functions, since dashes are not allowed here.   
-   
-However, to keep things as simple as possible, extensions will be autoloaded by their namespace and class name. It is **not required** to setup autoloading in your `composer.json`. Therefore it is important to understand and follow the naming scheme described below. Note that the file name of your PHP class must be lowercase.
+The autoloading of extensions is handled by the Composer autoloader. Note that it is good practice to use a combination of `YourVendor/YourExtension` to call extensions in Automad templates and set up the PHP namespace accordingly: 
 
-	Package name:   you/awesome-extension
-	Class file:     packages/you/awesomeextension/awesomeextension.php
-	Namespace:      You
-	Class:          AwesomeExtension 
-	Method:         AwesomeExtension()
+    namespace YourVendor;
+    class YourExtension {
+        public function YourExtension($Automad, $options) {
+            ...
+        }
+    }
+    
+Such an extension can then be used in templates like:
+
+    <@ Vendor/YourExtension { key: 'value' } @>
+    
+Note that class names of classes autoload by Composer are case-sensitive.
+
+## composer.json
+
+To install extensions to the `packages` directory and make autoloading work, besides `name` and `description`, the following fields are required in an extension's `composer.json` file:
+
+    {
+        "type": "automad-package",
+        "keywords": ["extension"],
+        "require": {
+            "automad/package-installer": "^1.1"
+        },
+        "autoload": {
+            "classmap": [""]
+        }
+    }
