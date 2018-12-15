@@ -1,9 +1,7 @@
 <?php
 /** 
  * 	Adapt the namespace to your vendor name in your composer.json. 
- * 	Following the example in README.md, your namespace would be:
- *
- * 		namespace You;
+ * 	Following the example in README.md, your namespace would be "YourVendor".
  */
 
 namespace Automad;
@@ -18,28 +16,23 @@ defined('AUTOMAD') or die('Direct access not permitted!');
 
 
 /**
- *	Again, according to the example in the README.md change your class name to:
- *	
- * 		class AwesomeExtension { ... }
- *
- * 	The path of this file would than be:
- * 	packages/you/awesomeextension/awesomeextension.php
+ *	Again, according to the example in the README.md,
+ *	change your class name to "YourExtension".
  */
 
-class ExtensionSkeleton {
+class Extension {
 	
 	
 	/**
-	 *  Your main function must have the same name as your class:
-	 *
-	 * 		public function AwesomeExtension($options, $Automad) { ... }
+	 *  Your main function must have the same name as your class 
+	 *  and therefore would be named "YourExtension($options, $Automad)""
 	 *
 	 * 	@param array $options
 	 * 	@param object $Automad
 	 * 	@return string the output of your extension
 	 */
 	
-	public function ExtensionSkeleton($options, $Automad) {
+	public function Extension($options, $Automad) {
 		
 		// Define sone default for the options here.
 		$defaults = array(
