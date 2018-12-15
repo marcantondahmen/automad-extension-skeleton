@@ -2,9 +2,12 @@
     "name": "automad/extension-skeleton",
     "description": "An Automad extension package skeleton for developers",
     "type": "automad-package",
-    "keywords": ["extension", "development"],
+    "keywords": ["extension"],
     "license": "MIT",
     "require": {
-        "automad/package-installer": ">=1.1-stable"
+        "automad/package-installer": "^1.1"
+    },
+    "autoload": {
+        "classmap": [""]
     }
 }
