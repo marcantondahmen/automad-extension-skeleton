@@ -1,7 +1,6 @@
 # Automad Extension Skeleton
 
-You can use this package as a Composer package skeleton for new [Automad](https://automad.org) extensions. 
-Follow the steps below to get started.
+You can use this package as a Composer package skeleton for new [Automad](https://automad.org) extensions. Follow the steps below to get started. Note that this guide only shows one strategy and tries to help inexperienced developers to understand the basics of package development. In case you are already familiar with Composer you will probably have your own workflow.
 
 ## 1. Create a Composer Package
 
@@ -27,7 +26,7 @@ Edit the `name` and `description` fields in the `composer.json`. To install exte
             "classmap": [""]
         }
     }
-	
+
 ## 4. Rename and Edit The Class File
 
 Before publishing the extension, the structure of the class file has to be defined to enable Composer to create the autoloader when the package is installed. The actual development of the extension is done in a later step. Note that it is good practice to use a combination of `YourVendor/YourExtension` to call extensions in Automad templates and set up the PHP namespace accordingly: 
@@ -43,7 +42,7 @@ Also rename the file accordingly to follow the Composer naming convention.
 Such an extension could then be used later in templates like:
 
     <@ YourVendor/YourExtension { key: 'value' } @>
-    
+
 ## 5. Publish Your Extension
 
 Commit and push your new package to Bitbucket or GitHub. The temporary repository can be removed now. Follow the guide on [Packagist](https://packagist.org) to publish your extension.
